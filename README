@@ -1,0 +1,48 @@
+Skyline Traces Overview
+By Jasleen Singh (jasleen@cs.ucla.edu)
+
+This document gives an overview of the different parts of the Skyline Traces application (codenamed 'Hilos' and used interchangeably), how they individually work and how they interact with each other. To learn how to setup a dev environment, see setup.txt.
+
+The Skyline Traces application has two major components: 1) An Android application running on a tablet and 2) A web application running on a Java web server (http://la.remap.ucla.edu:8080/hilos). There's also 3) An updater application which is used to download an install a newer version of the main application, but we'll talk about that later, and 4) A library which contains common data structures shared between the Android application and the Server-side component. In our case, we have been using Samsung Galaxy Tab tablets (http://www.samsung.com/us/mobile/galaxy-tab/SPH-P100ZKASPR) to run the Android app and Tomcat (http://tomcat.apache.org/) as our application server. Both are written in Java. In the following description, a walkthrough of the application is presented, as it would be normally used by a user. The relevant classes are in square brackets. See the class file comments for implementation details.
+
+Client
+======
+The Android application, when it is first downloaded, is just a shell which contains all the "business logic" but very few of the assets (images and other media items). When the application is first launched, it downloads  [Network] and caches [Cache, CacheList] images and sounds used by the different themes [StyleInfo] and caches it on disk (sdcard). After this initialization activity [InitializationActivity] is complete, a splash screen [Splash, SplashView] is shown. There is a settings button on the top left corner. The hostname (which identifies where the server is located) can be set through the settings panel [AppSettings]. The settings panel can be accessed by logging in with a special administrator account (password: stadmin). Log in as admin to see some of the options available. The other buttons on the splash screen allow a normal (non-administator) user to change some settings such as the language or style. A user can also choose to login, register or reset password [Login, LoginView, Join, JoinView, ResetPassword, ResetPasswordView], but this feature is not used currently.
+
+Skyline Traces conceptually consists of 3 different views: 1) A Map view, 2) A Skyline view and 3) A 3D view. An abstract superclass [BaseActivity, BaseView] provides functionality which is common to most activities in the application (such as displaying a background image, playing sound effect, text-to-speech output etc.)
+
+The Map view [MapDisplay] shows a map of the LA State Historic Park and the area around it. The map has a number of hot spots, also called Landmarks [Landmark, LandmarkOverlay]. The user can view information about a landmark by touching it. The map view uses GPS to show the current location of the user on the map. When the user enters a landmark, an overlay appears around the landmark and media items related to it are shown in a window on the map [LightBoxMini]. Also, a cloud [Cloudscape] of keywords belonging to the media items shows up in the top-left corner. The cloud can be touched to show an expanded view. By default, all items related to a landmark are selected upon entering a landmark. Alternatively, you can choose to show them by proximity to the user's current location (via settings). If showing media items by proximity, each media item appears as a small 'marker' [ResourceOverlayItem] which can be selected manually. Multiple items can be selected by long-pressing and dragging to create a rectangular marquee. All items within the marquee are selected upon release. This feature is implemented using a transparent overlay [GlassPane]. The map shows custom tiles using a custom tile source [HilosXYTileSource] which is used by the osmdroid library to download and display custom tiles from our server. A floating toolbar [MapToolbar] provides functions such as zoom-in/out, view the help or about screen or switch to manual mode. In the manual mode, the center of the screen becomes the user's 'virtual' location, and they can pan the map to change their location.
+
+The Skyline view [PanoDisplay, PanoDisplayView] shows a long panoramic image which scrolls automatically depending on which direction the user faces the tablet (using the built-in compass). As in the map view, it shows hot spots [HighlightOverlayItem] which can be selected. When the window showing current media items is touched, it launches the media viewer.
+
+The media viewer [LightBoxActivity, LightBoxView] shows the currently selected media items. It consists of a preview area [LightBoxShow, which is also used in LightBoxMini], a list of keywords belonging to the selected media item [KeywordList] and a strip of thumbnails of the entire set of media items [ThumbnailList]. The preview can be touched to view the media item in full screen. When an audio or video is selected, a 'play' button appears which can be used to play the media file. The items are downloaded in a separate background thread using a provider [LightBoxItemProvider] which abstracts away the details of how exactly the items are fetched (they could be locally stored or on a remote server).
+
+There's an image gallery [Galerie, GalerieView] component which lays out the images in 3 dimensions, but it hasn't been developed completely, and can be removed at your discretion.
+
+The 3D view [CityLens] is incomplete too, and there's little you can do except load models and zoom or pan. It uses the Min3D library to load 3D models specified in the OBJ format. Textures are specified in PNG format and must have a width/height which is a power of 2.
+
+Both the gallery and the 3D view can be accessed via toolbars in the map and skyline view. If you choose to remove them, remove the corresponding buttons too.
+
+Server
+======
+The server side component supports the Android application by providing the following features. (Note that the server-side uses two databases for data retrieval, one for app specific tasks (hilos) and the other for media items (lashp_g2). The name at the beginning specifies which db or local filesystem path is used for a particular feature).
+
+(hilos) Users can signup [Join] and authenticate themselves [Login]. Whenever a new user joins, an email is sent to the one provided [VerifyEmail]. All emails are sent through a queue [EmailQueue].
+
+(hilos) Users can change [ChangePassword] or reset [ResetPassword] their password or change their email address [ChangeEmail].
+
+(lashp_g2) The entire resource list , consisting of media items to be shown in the application, can be downloaded in either the JSON format or rendered as an HTML page [GetResourceList]. Items are stored in a Gallery2 database and each item has zero or more attributes (<name>:<value>) or keywords (<name>:<weight>). Attributes are used for filtering and keywords are used to link related items together. The list as an HTML page is accessible at http://la.remap.ucla.edu:8080/hilos/getResourceList?fmt=html
+
+(lashp_g2) Each resource can be downloaded [GetResource]. JPEG images are fetched from the database the first time they are requested, resized to a manageable size and cached for future use. All other media types are fetched directly from the Gallery2 database.
+
+(/home/hilos/res) Style items and other assets can be downloaded [GetStyleItemList, GetStyleItem]. These items are stored on the local filesystem on the server.
+
+(/home/hilos/res, hilos) 3D models and related textures can be downloaded [GetModelList, GetModel].
+
+(/home/hilos/res) Custom tiles can be downloaded [GetTile] or a new set of tiles can be created using the web service [CreateMapTiles] accessible at http://la.remap.ucla.edu:8080/hilos/createMapTiles
+
+(/home/hilos/res) Updates to the application can be downloaded [GetUpdate].
+
+Updater
+=======
+The updater application is a separate Android application that connects to the server to download and install a newer version of the main application.

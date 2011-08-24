@@ -1,0 +1,15 @@
+The four parts of the Skyline Traces application (Android app, web server component, shared library and the updater, which is another Android app) are all written in Java. So it is recommended that you use an IDE which supports Java for development. This document shows how to set up a development environment using Eclipse (http://www.eclipse.org), though you are free to use anything else too.
+
+1. Download and install the latest version of Eclipse IDE for Java developers. Install the Android SDK and plugin as outlined here: http://developer.android.com/sdk/eclipse-adt.html
+
+2. Copy the three project files (hilos_android, hilos_server, hilos_common and hilos_updater_android) to your workspace.
+
+3. Run eclipse and import the four projects into your current workspace. If you've set up the Android SDK correctly, all four should compile and build.
+
+4. Install the USB drivers from Android's website for your OS. Connect the tablet through a cable to your PC and download the application to it through Eclipse (Ctrl+F11). The application should install on the tablet and run. You will see the login screen on launch.
+
+5. To set up the server side, download the latest version of the Tomcat application server (http://tomcat.apache.org/). Find build-tomcat.xml under hilos_server project and update ${path/to/tomcat}. Drag this file into the Ant view and click on 'install' to copy the .war file to Tomcat's webapps folder. Also download the resource folder from the server (/home/hilos/res at la.remap.ucla.edu) to someplace on your local filesystem. Change the paths specified in webapps/hilos/server.properties to match where the resources are located.
+
+6. Set the ip address in hostname under Settings (log in using password 'stadmin') to your computer's ip address.
+
+7. Restart the application and check that it is able to download from the server running on your computer.
