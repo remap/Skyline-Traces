@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Hilos</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Cancelar</string>
+	<string name="error">Error</string>
+    <string name="login_join">Iniciar sesión / Únete</string>
+	<string name="email">Correo electrónico</string>
+	<string name="password">Contraseña</string>
+	<string name="confirm_password">Confirmar contraseña</string>
+	<string name="name">Nombre</string>
+	<string name="login">Iniciar sesión</string>
+	<string name="login_anonymously">Entrada de forma anónima</string>
+	<string name="dont_have_account">No tienes una cuenta?</string>
+	<string name="password_forgotpassword">Contraseña (¿Olvidó?)</string>
+	<string name="join">Únete</string>
+	<string name="settings">Configuración</string>
+	<string name="debug">Depuración</string>
+	<string name="hostname">Servidor de nombres</string>
+    <string name="language">Idioma</string>
+	<string name="cache">Caché</string>
+	<string name="style">Estilo</string>
+	<string name="about">Sobre</string>
+	<string name="debug_summary">Bandera de activar / desactivar la información de
+		depuración</string>
+    <string name="language_summary">El lenguaje utilizado para mostrar texto</string>
+	<string name="hostname_summary">Dirección del servidor host</string>
+	<string name="cache_summary">Los recursos que se almacenan localmente para
+		volver a recuperar más rápido</string>
+	<string name="style_summary">Aspecto de la aplicación</string>
+	<string name="about_summary">La información sobre esta aplicación</string>
+	<string name="send_new_password">Envíame una nueva contraseña</string>
+	<string name="fill_in_all_fields">Complete todo el formulario</string>
+	<string name="enter_valid_email">Introducir una dirección válida de correo
+		electrónico</string>
+	<string name="passwords_do_not_match">Las contraseñas no coinciden</string>
+	<string name="verify_email_to_continue">Verifique su correo electrónico para continuar
+	</string>
+	<string name="your_password_reset">Su contraseña se ha restablecido</string>
+    <string name="language_0">Inglés</string>
+    <string name="language_1">Español</string>
+    <string name="language_2">Chino (Simplificado)</string>
+	<string name="style_0">Oscuro</string>
+	<string name="style_1">Colorido</string>
+	<string name="style_2">Dibujo</string>
+</resources>

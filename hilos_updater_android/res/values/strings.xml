@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Skyline Traces Updater</string>
+	<string name="app_settings">Application Settings</string>
+	<string name="debug">Debug</string>
+	<string name="connection">Connection</string>
+	<string name="hostname">Hostname</string>
+	<string name="hostname_default">http://la.remap.ucla.edu:8080/hilos</string>
+    <string name="about">About</string>
+</resources>

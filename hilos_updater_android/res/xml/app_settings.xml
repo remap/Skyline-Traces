@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/app_settings" android:key="appadmin">
+
+	<CheckBoxPreference android:key="debug"
+		android:title="@string/debug" android:persistent="true" />
+	<PreferenceCategory android:title="@string/connection"
+		android:key="connection">
+		<EditTextPreference android:key="hostname"
+			android:title="@string/hostname" android:persistent="true"
+			android:defaultValue="@string/hostname_default" />
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/about">
+		<PreferenceScreen android:key="about" android:title="About">
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>

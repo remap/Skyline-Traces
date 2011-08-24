@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="edu.ucla.tft.hilos" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<application android:name=".Hilos" android:icon="@drawable/icon"
+		android:label="@string/app_name">
+		<activity android:name=".Splash" android:label="@string/app_name"
+			android:configChanges="locale">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Login" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".Join" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".ResetPassword" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".AppSettings" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".galerie.Galerie" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".citylens.CityLens" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".lightbox.LightBoxActivity"
+			android:label="@string/app_name">
+		</activity>
+		<activity android:name=".maplet.MapDisplay" android:label="@string/app_name">
+		</activity>
+		<activity android:name=".panoromeo.PanoDisplay"
+			android:label="@string/app_name">
+		</activity>
+		<activity android:name=".CacheList" android:label="Cache">
+		</activity>
+		<activity android:name=".About" android:label="About">
+		</activity>
+		<activity android:name=".Help" android:label="Help">
+		</activity>
+	</application>
+	<uses-sdk android:minSdkVersion="8" />
+</manifest> 

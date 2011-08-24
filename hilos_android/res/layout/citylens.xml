@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:id="@+id/glSurfaceHolder"
+		android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <edu.ucla.tft.hilos.citylens.CityLensZoomToolbar
+        android:id="@+id/zoom_toolbar" android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <edu.ucla.tft.hilos.citylens.CityLensRotateToolbar
+        android:id="@+id/rotate_toolbar" android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

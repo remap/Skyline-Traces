@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="LightTheme" parent="@android:style/Theme.Light">
+	</style>
+	<style name="DarkTheme" parent="@android:style/Theme.Black">
+	</style>
+    <style name="PrevStyleButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/ic_style_prev</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="NextStyleButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/ic_style_next</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

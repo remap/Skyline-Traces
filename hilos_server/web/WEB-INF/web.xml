@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>Hilos</display-name>
+	<description>Hilos</description>
+
+	<resource-ref>
+		<description>hilos db connection</description>
+		<res-ref-name>jdbc/hilos</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+    <resource-ref>
+        <description>lashp_g2 db connection</description>
+        <res-ref-name>jdbc/lashp_g2</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.Login</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResetPassword</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.ResetPassword</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResetPassword</servlet-name>
+		<url-pattern>/resetPassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Join</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.Join</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Join</servlet-name>
+		<url-pattern>/join</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VerifyEmail</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.VerifyEmail</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>VerifyEmail</servlet-name>
+		<url-pattern>/verifyEmail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangeEmail</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.ChangeEmail</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ChangeEmail</servlet-name>
+		<url-pattern>/changeEmail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangePassword</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.ChangePassword</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ChangePassword</servlet-name>
+		<url-pattern>/changePassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetResourceList</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetResourceList</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetResourceList</servlet-name>
+		<url-pattern>/getResourceList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetResource</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetResource</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetResource</servlet-name>
+		<url-pattern>/getResource</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetModel</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetModel</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetModelList</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetModelList</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetModelList</servlet-name>
+		<url-pattern>/getModelList</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetModel</servlet-name>
+		<url-pattern>/getModel</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetTile</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetTile</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetTile</servlet-name>
+		<url-pattern>/getTile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetSkyline</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetSkyline</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetSkyline</servlet-name>
+		<url-pattern>/getSkyline</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetStyleItem</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetStyleItem</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetStyleItem</servlet-name>
+		<url-pattern>/getStyleItem</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetStyleItemList</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetStyleItemList</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetStyleItemList</servlet-name>
+		<url-pattern>/getStyleItemList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetUpdate</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetUpdate</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetUpdate</servlet-name>
+		<url-pattern>/getUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateMapTiles</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.CreateMapTiles</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreateMapTiles</servlet-name>
+		<url-pattern>/createMapTiles</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetKeywordInfo</servlet-name>
+		<servlet-class>edu.ucla.tft.hilos.GetKeywordInfo</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetKeywordInfo</servlet-name>
+		<url-pattern>/getKeywordInfo</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Skyline Traces</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Cancel</string>
+	<string name="error">Error</string>
+    <string name="invalid_password">Invalid Password!</string>
+	<string name="login_join">Login / Join</string>
+	<string name="email">Email</string>
+	<string name="password">Password</string>
+	<string name="confirm_password">Confirm Password</string>
+	<string name="name">Name</string>
+	<string name="login">Login</string>
+	<string name="login_anonymously">Login Anonymously</string>
+	<string name="dont_have_account">Don\'t have an account yet?</string>
+	<string name="password_forgotpassword">Password (forgot?)</string>
+	<string name="join">Join</string>
+	<string name="settings">Settings</string>
+	<string name="change_language">Language / Idioma / 语言</string>
+    <string name="change_style">Change Style</string>
+	<string name="debug">Debug</string>
+	<string name="hostname">Hostname</string>
+	<string name="language">Language</string>
+    <string name="offline_mode">Offline Mode</string>
+	<string name="cache">Cache</string>
+	<string name="style">Style</string>
+    <string name="effects_settings">Effects Settings</string>
+    <string name="sound_vibration">Sound and Vibration</string>
+    <string name="text_to_speech">Text to Speech</string>
+	<string name="map_settings">Map Settings</string>
+	<string name="track_location">Track Location</string>
+    <string name="show_landmarks_using">Show Landmarks Using</string>
+	<string name="proximity_radius">Proximity Radius</string>
+	<string name="about">About</string>
+	<string name="debug_summary">Flag to turn on/off debug information</string>
+	<string name="language_summary">Language used for displaying text</string>
+	<string name="hostname_summary">Address of the host server</string>
+    <string name="offline_mode_summary">Run in offline mode (pre-fetches and caches all resources)</string>
+	<string name="cache_summary">Resources that are stored locally for faster
+		re-fetch</string>
+	<string name="style_summary">Look and feel of the application</string>
+	<string name="about_summary">Information about this application</string>
+    <string name="track_location_summary">Use GPS or network data to track user location
+    </string>
+    <string name="show_landmarks_using_summary">Criteria to show media items related to landmarks</string>
+    <string name="proximity_radius_summary">Distance from current location within which
+        landmarks are visible</string>
+    <string name="sound_vibration_summary">Use sound and vibration effects during interaction</string>
+    <string name="text_to_speech_summary">Give audio commentary while interacting with the
+        application</string>
+	<string name="send_new_password">Send me a new password</string>
+	<string name="fill_in_all_fields">Please fill in all the fields</string>
+	<string name="enter_valid_email">Please enter a valid email address</string>
+	<string name="passwords_do_not_match">Passwords do not match</string>
+	<string name="verify_email_to_continue">Please verify your email to continue</string>
+	<string name="your_password_reset">Your password has been reset</string>
+	<string name="language_0">English</string>
+	<string name="language_1">Spanish</string>
+	<string name="language_2">Chinese (Simplified)</string>
+	<string-array name="language_names">
+		<item>@string/language_0</item>
+		<item>@string/language_1</item>
+		<item>@string/language_2</item>
+	</string-array>
+	<string-array name="language_values">
+		<item>en</item>
+		<item>es</item>
+		<item>zh</item>
+	</string-array>
+	<string name="style_0">Dark</string>
+	<string name="style_1">Light</string>
+	<string name="style_2">Sketchy</string>
+	<string-array name="style_names">
+		<item>@string/style_0</item>
+		<item>@string/style_1</item>
+		<item>@string/style_2</item>
+	</string-array>
+	<string-array name="style_values">
+		<item>style_0</item>
+		<item>style_1</item>
+		<item>style_2</item>
+	</string-array>
+    <string name="show_landmarks_using_association">Association</string>
+    <string name="show_landmarks_using_proximity">Proximity</string>
+    <string-array name="show_landmarks_using_names">
+        <item>@string/show_landmarks_using_association</item>
+        <item>@string/show_landmarks_using_proximity</item>
+    </string-array>
+    <string-array name="show_landmarks_using_values">
+        <item>show_landmarks_using_association</item>
+        <item>show_landmarks_using_proximity</item>
+    </string-array>
+	<string name="proximity_radius_100">100 meters</string>
+	<string name="proximity_radius_250">250 meters</string>
+	<string name="proximity_radius_500">500 meters</string>
+	<string name="proximity_radius_1000">1 kilometer</string>
+	<string name="proximity_radius_0">Unlimited</string>
+	<string-array name="proximity_radius_names">
+		<item>@string/proximity_radius_100</item>
+		<item>@string/proximity_radius_250</item>
+		<item>@string/proximity_radius_500</item>
+		<item>@string/proximity_radius_1000</item>
+		<item>@string/proximity_radius_0</item>
+	</string-array>
+	<string-array name="proximity_radius_values">
+		<item>100</item>
+		<item>250</item>
+		<item>500</item>
+		<item>1000</item>
+		<item>0</item>
+	</string-array>
+</resources>

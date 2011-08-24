@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="HilosCommon">
+	<!-- Properties -->
+	<property name="web.home" location="web" />
+	<property file="build.properties" />
+	<property name="client.jar.file" value="hilos_common.jar" />
+	<property environment="env" />
+
+	<target name="dist-client">
+		<jar destfile="${web.home}/${client.jar.file}">
+			<fileset dir="bin" includes="edu/ucla/tft/hilos/*" />
+		</jar>
+	</target>
+
+	<target name="copy-to-clientserver" depends="dist-client">
+		<copy file="web/hilos_common.jar" todir="../hilos_android/lib/" />
+        <copy file="web/hilos_common.jar" todir="../hilos_server/lib/" />
+	</target>
+</project>

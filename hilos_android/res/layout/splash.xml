@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.ucla.tft.hilos.SplashView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="#313540">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:padding="25sp">
+		<Button android:id="@+id/settings" android:layout_width="30sp"
+			android:layout_height="30sp" android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true" />
+		<Button android:id="@+id/change_language" android:text="@string/change_language"
+			android:textSize="12sp" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true" />
+        <Button android:id="@+id/change_style" android:text="@string/change_style"
+            android:textSize="12sp" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+		<Button android:id="@+id/login_join" android:text="@string/login_join"
+			android:textSize="12sp" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true" />
+	</RelativeLayout>
+</edu.ucla.tft.hilos.SplashView>

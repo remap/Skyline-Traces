@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_centerInParent="true"
+		android:orientation="vertical" android:gravity="center"
+		android:padding="20sp">
+		<ImageView android:src="@drawable/updater"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<CheckBox android:id="@+id/uninstall" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Uninstall older version (clears application settings)"
+			android:textSize="11sp" />
+		<Button android:id="@+id/updateAndInstall"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:text="Update and Install" />
+		<Button android:id="@+id/settings" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Settings"
+			android:layout_marginTop="20sp" />
+	</LinearLayout>
+	<LinearLayout android:id="@+id/progressPanel"
+		android:layout_width="fill_parent" android:layout_height="50sp"
+		android:layout_alignParentBottom="true" android:orientation="horizontal"
+		android:padding="5sp" android:background="#555" android:visibility="invisible">
+		<TextView android:id="@+id/progressText" android:padding="5sp"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textColor="#fff" android:layout_gravity="center" />
+		<ProgressBar android:id="@+id/progress"
+			android:layout_width="wrap_content" android:layout_weight="1"
+			android:layout_height="wrap_content" android:indeterminate="false"
+			android:layout_gravity="center" android:max="100"
+			style="?android:attr/progressBarStyleHorizontal" />
+		<Button android:id="@+id/cancel" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Cancel" />
+	</LinearLayout>
+</RelativeLayout>

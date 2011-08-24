@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:padding="10sp">
+	<edu.ucla.tft.hilos.lightbox.LightBoxMini
+		android:id="@+id/lightBoxMini" android:layout_width="10sp"
+		android:layout_height="10sp" android:background="#77000000"
+		android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+		android:padding="10sp">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical">
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="25sp" android:orientation="horizontal">
+				<Button android:id="@+id/mini_prev" android:layout_width="25sp"
+					android:layout_height="fill_parent"/>
+				<TextView android:id="@+id/mini_title"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:layout_weight="1" android:textColor="#fff"
+					android:textSize="10sp" android:gravity="center" />
+				<Button android:id="@+id/mini_next" android:layout_width="25sp"
+					android:layout_height="fill_parent" />
+			</LinearLayout>
+			<edu.ucla.tft.hilos.lightbox.LightBoxShow
+				android:id="@+id/lightBoxShow" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_weight="1" />
+		</LinearLayout>
+	</edu.ucla.tft.hilos.lightbox.LightBoxMini>
+</RelativeLayout>

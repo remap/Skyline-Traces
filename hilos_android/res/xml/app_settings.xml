@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/settings" android:key="app_settings">
+	<CheckBoxPreference android:key="debug"
+		android:title="@string/debug" android:summary="@string/debug_summary"
+		android:persistent="true" />
+	<ListPreference android:key="language" android:title="@string/language"
+		android:summary="@string/language_summary" android:persistent="true"
+		android:entryValues="@array/language_values" android:entries="@array/language_names"
+		android:defaultValue="@string/language_0" />
+	<EditTextPreference android:key="hostname"
+		android:title="@string/hostname" android:summary="@string/hostname_summary"
+		android:persistent="true" android:defaultValue="http://[server-address]" />
+	<CheckBoxPreference android:key="offline_mode"
+		android:title="@string/offline_mode" android:summary="@string/offline_mode_summary"
+		android:persistent="true" />
+	<PreferenceScreen android:key="cache" android:title="@string/cache"
+		android:summary="@string/cache_summary">
+	</PreferenceScreen>
+	<ListPreference android:key="style" android:title="@string/style"
+		android:summary="@string/style_summary" android:persistent="true"
+		android:entryValues="@array/style_values" android:entries="@array/style_names"
+		android:defaultValue="@string/style_0" />
+	<CheckBoxPreference android:key="sound_vibration"
+		android:title="@string/sound_vibration" android:summary="@string/sound_vibration_summary"
+		android:persistent="true" />
+	<CheckBoxPreference android:key="text_to_speech"
+		android:title="@string/text_to_speech" android:summary="@string/text_to_speech_summary"
+		android:persistent="true" />
+	<PreferenceScreen android:key="about" android:title="@string/about"
+		android:summary="@string/about_summary">
+	</PreferenceScreen>
+	<PreferenceCategory android:title="@string/map_settings"
+		android:key="map_settings">
+		<ListPreference android:key="show_landmarks_using"
+			android:title="@string/show_landmarks_using" android:summary="@string/show_landmarks_using_summary"
+			android:persistent="true" android:entryValues="@array/show_landmarks_using_values"
+			android:entries="@array/show_landmarks_using_names"
+			android:defaultValue="@string/show_landmarks_using_association" />
+		<CheckBoxPreference android:key="track_location"
+			android:title="@string/track_location" android:summary="@string/track_location_summary"
+			android:persistent="true" />
+		<ListPreference android:key="proximity_radius"
+			android:title="@string/proximity_radius" android:summary="@string/proximity_radius_summary"
+			android:persistent="true" android:entryValues="@array/proximity_radius_values"
+			android:entries="@array/proximity_radius_names" android:defaultValue="@string/proximity_radius_100" />
+	</PreferenceCategory>
+</PreferenceScreen>

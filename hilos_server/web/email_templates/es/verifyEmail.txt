@@ -1,0 +1,19 @@
+Correo electrónico de verificación
+
+Hola $NAME_,
+
+Gracias por registrarse con Hilos, un proyecto del Centro de REMAP de la UCLA.
+
+Para comprobar que usted es dueño de esta dirección de correo electrónico, haga clic en:
+$URL_
+
+Si al hacer clic en el vínculo anterior no funciona, intente lo siguiente:
+
+Seleccionar y copiar el enlace completo.
+Abra una ventana del navegador y pegar el enlace en la barra de direcciones.
+Haga clic en Ir o, en el teclado, presione Intro o Retorno.
+
+Tenga un buen día,
+Hilos equipo
+
+Este correo electrónico fue enviado a $EMAIL_. Si usted tiene alguna pregunta, póngase en contacto con nosotros en hilos.remap.ucla@gmail.com.

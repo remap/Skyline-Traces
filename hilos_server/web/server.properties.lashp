@@ -1,0 +1,15 @@
+hostname=http://localhost:8080/hilos
+mysql=mysql://localhost:3306/lashp_g2,root,db467
+apkName=skylinetraces.apk
+downloadResourceURL=http://lashp.remap.ucla.edu/visual/main.php?g2_view=core.DownloadItem&g2_itemId=%s
+tempDir=/home/jasleen/hilos_res/temp
+imageDir=/home/jasleen/hilos_res/image
+audioDir=/home/jasleen/hilos_res/audio
+videoDir=/home/jasleen/hilos_res/video
+modelDir=/home/jasleen/hilos_res/model
+highlightDir=/home/jasleen/hilos_res/highlight
+landmarkDir=/home/jasleen/hilos_res/landmark
+tilesDir=/home/jasleen/hilos_res/lashmap
+skylineDir=/home/jasleen/hilos_res/skyline
+styleDir=/home/jasleen/hilos_res/style
+updatesDir=/home/jasleen/hilos_res/updates

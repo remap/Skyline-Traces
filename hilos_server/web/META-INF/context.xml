@@ -1,0 +1,11 @@
+<Context path="/hilos" docBase="hilos" reloadable="true"
+	crossContext="true">
+	<Resource name="jdbc/lashp_g2" auth="Container" type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true" username="root"
+		password="db467" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/lashp_g2" />
+    <Resource name="jdbc/hilos" auth="Container" type="javax.sql.DataSource"
+        maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true" username="root"
+        password="db467" driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/hilos" />
+</Context>

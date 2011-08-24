@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="app_name">Hilos</string>
+	<string name="ok">同意</string>
+	<string name="cancel">取消</string>
+	<string name="error">错误</string>
+    <string name="login_join">登录 / 注册</string>
+	<string name="email">电邮</string>
+	<string name="password">密码</string>
+	<string name="confirm_password">确认密码</string>
+	<string name="name">用户名</string>
+	<string name="login">登录</string>
+	<string name="login_anonymously">匿名登录</string>
+	<string name="dont_have_account">注册会员</string>
+	<string name="password_forgotpassword">密码 (忘记?)</string>
+	<string name="join">注册</string>
+	<string name="settings">设置</string>
+	<string name="debug">调试</string>
+	<string name="hostname">主机名</string>
+	<string name="language">语言</string>
+	<string name="cache">(not set)</string>
+	<string name="style">式样</string>
+	<string name="about">关于Hilos</string>
+	<string name="debug_summary">(not set)</string>
+	<string name="language_summary">使用的语言显示文字</string>
+	<string name="hostname_summary">主机名地址</string>
+	<string name="cache_summary">(not set)</string>
+	<string name="style_summary">应用外表</string>
+	<string name="about_summary">关于应用</string>
+	<string name="send_new_password">请送我新密码</string>
+	<string name="fill_in_all_fields">请填写所有字段</string>
+	<string name="enter_valid_email">请填写正确电邮</string>
+	<string name="passwords_do_not_match">两次密码不一致</string>
+	<string name="verify_email_to_continue">请确认您的电邮以继续</string>
+	<string name="your_password_reset">您的密码已重置</string>
+	<string name="language_0">英语</string>
+	<string name="language_1">西班牙语</string>
+	<string name="language_2">华语（简体）</string>
+	<string name="style_0">暗</string>
+	<string name="style_1">亮</string>
+	<string name="style_2">绘画</string>
+</resources>

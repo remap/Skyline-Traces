@@ -1,0 +1,19 @@
+Email verification
+
+Hi $NAME_,
+
+Thank you for registering with Hilos, a project of the REMAP Center at UCLA.
+
+To verify that you own this email address, click:
+$URL_
+
+If clicking on the link above does not work, try the following:
+
+Select and copy the entire link.
+Open a browser window and paste the link in the address bar.
+Click Go or, on your keyboard, press Enter or Return.
+
+Have a nice day,
+Hilos Team
+
+This email was sent to $EMAIL_. If you have any questions, please contact us at hilos.remap.ucla@gmail.com.

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.ucla.tft.hilos.lightbox.LightBoxView
+	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/lightBoxImageView"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:id="@+id/expandedDisplay"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_weight="1" android:visibility="invisible">
+		<SurfaceView android:id="@+id/surfaceExpanded"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+		</SurfaceView>
+		<edu.ucla.tft.hilos.lightbox.LightBoxShow
+			android:id="@+id/lightBoxShowExpanded" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/normalDisplay"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_weight="1">
+			<SurfaceView android:id="@+id/surfaceNormal"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+			</SurfaceView>
+			<edu.ucla.tft.hilos.lightbox.LightBoxShow
+				android:id="@+id/lightBoxShowNormal" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" />
+			<TextView android:id="@+id/caption" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="14sp"
+				android:textColor="#ffffffff" android:background="#99000000"
+				android:layout_alignParentBottom="true" android:padding="10sp" />
+		</RelativeLayout>
+		<edu.ucla.tft.hilos.lightbox.KeywordList
+			android:id="@+id/keywordlist" android:layout_width="fill_parent"
+			android:layout_height="30sp" />
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="40sp" android:orientation="horizontal">
+			<Button android:id="@+id/prev" android:layout_width="40sp"
+				android:layout_height="fill_parent" />
+			<Button android:id="@+id/next" android:layout_width="40sp"
+				android:layout_height="fill_parent" />
+			<Button android:id="@+id/playPause" android:layout_width="40sp"
+				android:layout_height="fill_parent" />
+			<Button android:id="@+id/volume" android:layout_width="40sp"
+				android:layout_height="fill_parent" />
+			<SeekBar android:id="@+id/position" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:gravity="center"
+				android:layout_weight="1" />
+			<Button android:id="@+id/minimize" android:layout_width="40sp"
+				android:layout_height="fill_parent" android:gravity="right" />
+		</LinearLayout>
+		<edu.ucla.tft.hilos.lightbox.ThumbnailList
+			android:id="@+id/thumbnaillist" android:layout_width="fill_parent"
+			android:layout_height="60sp" />
+	</LinearLayout>
+</edu.ucla.tft.hilos.lightbox.LightBoxView>

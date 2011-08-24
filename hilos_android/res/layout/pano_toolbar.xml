@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/pano_toolbar" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:padding="20px">
+	<LinearLayout android:id="@+id/bg_pano_toolbar"
+		android:layout_width="wrap_content" android:layout_height="72px"
+		android:orientation="horizontal" android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true">
+		<Button android:id="@+id/pano_home" android:layout_width="48px"
+			android:layout_height="60px" />
+		<edu.ucla.tft.hilos.Separator
+			android:layout_width="16px" android:layout_height="60px" />
+		<Button android:id="@+id/pano_info" android:layout_width="48px"
+			android:layout_height="60px" />
+		<Button android:id="@+id/pano_help" android:layout_width="48px"
+			android:layout_height="60px" />
+		<edu.ucla.tft.hilos.Separator
+			android:layout_width="16px" android:layout_height="60px" />
+		<Button android:id="@+id/pano_pin" android:layout_width="48px"
+			android:layout_height="60px" />
+		<edu.ucla.tft.hilos.Separator
+			android:layout_width="16px" android:layout_height="60px" />
+		<Button android:id="@+id/pano_citylens" android:layout_width="48px"
+			android:layout_height="60px" />
+	</LinearLayout>
+</RelativeLayout>
