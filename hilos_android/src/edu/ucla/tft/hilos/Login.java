@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import edu.ucla.tft.hilos.Network.LoginTask;
-import edu.ucla.tft.hilos.maplet.MapDisplay;
 
 /**
  * Activity to display a login screen at the start of the application. Also
@@ -100,8 +99,6 @@ public class Login extends BaseActivity {
 							@Override
 							public void done(int uid) {
 								Hilos.setUID(uid);
-								startActivity(new Intent(Login.this,
-										MapDisplay.class));
 								Login.this.finish();
 							}
 

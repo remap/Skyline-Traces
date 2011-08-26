@@ -43,6 +43,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import edu.ucla.tft.hilos.About;
 import edu.ucla.tft.hilos.AbstractToolbar;
+import edu.ucla.tft.hilos.AppSettings;
 import edu.ucla.tft.hilos.BaseActivity;
 import edu.ucla.tft.hilos.BaseView;
 import edu.ucla.tft.hilos.Help;
@@ -53,6 +54,7 @@ import edu.ucla.tft.hilos.Network;
 import edu.ucla.tft.hilos.R;
 import edu.ucla.tft.hilos.Resource;
 import edu.ucla.tft.hilos.ResourceFilterByAttribute;
+import edu.ucla.tft.hilos.Splash;
 import edu.ucla.tft.hilos.StyleInfo;
 import edu.ucla.tft.hilos.StyleInfo.SoundId;
 import edu.ucla.tft.hilos.StyleInfo.StyleBitmapId;
@@ -288,7 +290,9 @@ public class MapDisplay extends BaseActivity implements LocationListener,
 		if (mCloudscape.getState() == Cloudscape.HELD) {
 			mCloudscape.dismiss();
 		} else {
-			super.onBackPressed();
+			Intent intent = new Intent(this, Splash.class);
+			startActivity(intent);
+			finish();
 		}
 	}
 
@@ -768,7 +772,7 @@ public class MapDisplay extends BaseActivity implements LocationListener,
 			break;
 		}
 	}
-	
+
 	@Override
 	protected void onStop() {
 		mMapView.getTileProvider().clearTileCache();
