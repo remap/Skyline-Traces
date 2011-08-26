@@ -105,7 +105,8 @@ public abstract class BaseActivity extends Activity implements
 	}
 
 	protected int loadEarcon(String path) {
-		return mSoundPool.load(path, 1);
+		return path == null ? mSoundPool.load(this, R.raw.blank, 1)
+				: mSoundPool.load(path, 1);
 	}
 
 	public void playEarcon(int id) {
